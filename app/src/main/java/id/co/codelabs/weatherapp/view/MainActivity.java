@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
                     .add(R.id.container, new WeatherFragment())
                     .commit();
         }
-
     }
 
 
@@ -46,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void showInputDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Change city");
+        builder.setTitle("Ubah kota");
         final EditText input = new EditText(this);
         input.setInputType(InputType.TYPE_CLASS_TEXT);
         builder.setView(input);
-        builder.setPositiveButton("Go", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Ubah", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 changeCity(input.getText().toString());
